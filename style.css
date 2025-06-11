@@ -765,6 +765,7 @@ footer p {
   .section__pic-container {
     height: 250px; /* Smaller image */
     width: 250px;
+    border-radius: 50%; /* Explicitly set for clarity, though already inherited */
   }
   .section__text .title {
     font-size: 2rem; /* Smaller title font */
@@ -867,6 +868,7 @@ footer p {
   .section__pic-container {
     height: 200px; /* Even smaller image */
     width: 200px;
+    border-radius: 50%; /* Explicitly set for clarity, though already inherited */
   }
   .section__text .title {
     font-size: 1.8rem; /* Even smaller title font */
