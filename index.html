@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antony Hyson Seltran | Cyber Security</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <!-- Background Video -->
+    <video autoplay loop muted playsinline id="background-video">
+      <source src="./assets/BG_Video.mp4" type="video/mp4">
+      <!-- You can add more <source> tags for different video formats (e.g., .webm, .ogv) for broader browser support -->
+      Your browser does not support the video tag.
+    </video>
+
+    <nav id="desktop-nav">
+      <div class="logo">Antony Hyson Seltran</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Antony Hyson Seltran</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" alt="Antony Hyson Seltran profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Greetings, I am</p>
+        <h1 class="title">Antony Hyson Seltran</h1>
+        <p class="section__text__p2">Cybersecurity Analyst, Ethical Hacker</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Antony_Hyson_Seltran_CV.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/antonyhysonseltran'"
+          />
+          <img
+            src="./assets/email.png"
+            alt="Email"
+            class="icon"
+            onclick="window.location.href='mailto:work.antonyhyson@gmail.com'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Uncover More About</p>
+      <h1 class="title">My Expertise</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years<br />Cyber Security & IT</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>MSc Cyber Security Analytics<br />BE Computer Science Eng.</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              As a recent MSc Cyber Security Analytics graduate and freelance Cybersecurity Consultant, I empower small businesses and individuals with robust security solutions through expertise in vulnerability management, SIEM analysis, and incident response. My expertise spans troubleshooting, system administration (Windows/Linux), endpoint management (EDR solutions), security updates, and cybersecurity awareness training, including risk assessment and network traffic analysis. Leveraging my Computer Science Engineering background, I blend technical proficiency with a strong analytical mindset, honed through in-depth data analysis during my Master's studies. Additionally, I bring proven leadership skills, having successfully led multiple projects to completion. Passionate about continuous learning, I stay ahead of the curve in the ever-evolving cybersecurity landscape, utilizing tools like Nessus and OpenVAS.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Professional Journey</h1>
+      <div class="experience-details-container">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Cybersecurity Experience</h2>
+          <div class="slider-container">
+            <div class="article-wrapper" id="cyber-exp-wrapper">
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>CE/CE+ Compliance Consultant</h3>
+                  <p>Risk Crew</p>
+                  <p>June 2025 - Present (1 month)</p>
+                  <p>London Area, United Kingdom</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Cyber Security Consultant (Freelance)</h3>
+                  <p>August 2023 - May 2025 (1 year 10 months)</p>
+                  <p>London Area, United Kingdom</p>
+                  <p>Performed comprehensive risk assessments on 150+ applications, reducing security incidents by 40% and strengthening data protection for over 1,000 users. I also created and implemented security awareness training programs for 200+ employees, resulting in a 60% improvement in compliance metrics.</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div>
+                  <h3>Student Intern</h3>
+                  <p>CyberHakz Pvt-Ltd</p>
+                  <p>March 2022 - March 2022 (1 month)</p>
+                  <p>Chennai, Tamil Nadu, India</p>
+                  <p>Facilitated incident response for over 50 cyber threats with a 95% protocol adherence rate, minimizing system downtime. I engineered an EXIF metadata analysis tool which reduced investigation time by 60%, optimizing technical workflows.</p>
+                </div>
+              </article>
+            </div>
+            <button class="slider-nav-btn slider-nav-left" onclick="scrollSlider('cyber-exp-wrapper', -1)">&#9664;</button>
+            <button class="slider-nav-btn slider-nav-right" onclick="scrollSlider('cyber-exp-wrapper', 1)">&#9654;</button>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Other Experience</h2>
+          <div class="slider-container">
+            <div class="article-wrapper" id="other-exp-wrapper">
+              <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <div>
+                      <h3>Front of House</h3>
+                      <p>The George Public House</p>
+                      <p>October 2024 - Present</p>
+                      <p>Greater London, England, United Kingdom</p>
+                      <p>I quickly progressed into management by demonstrating strong adaptability and work ethic, consistently acquiring new skills in a fast-paced technical environment. I enhanced multitasking, interpersonal, and customer engagement abilities, effectively conveying complex concepts and building professional relationships.</p>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <div>
+                      <h3>Food Runner</h3>
+                      <p>The George Public House</p>
+                      <p>January 2025 - May 2025 (4 months)</p>
+                      <p>Greater London, England, United Kingdom</p>
+                      <p>During my tenure as a Food Runner, I consistently demonstrated effective communication and strong team collaboration to ensure smooth service operations.</p>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <div>
+                      <h3>Freelance Photographer</h3>
+                      <p>March 2019 - May 2025 (6 years 3 months)</p>
+                      <p>London Area, United Kingdom</p>
+                      <p>As a Freelance Photographer, I developed and honed my creative and technical skills by capturing diverse subjects and delivering high-quality visual content to clients.</p>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <div>
+                      <h3>Student Brand Ambassador</h3>
+                      <p>Amber</p>
+                      <p>August 2023 - April 2025 (1 year 10 months)</p>
+                      <p>Newark, Delaware, United States</p>
+                      <p>I increased brand awareness and engagement through strategic outreach and social media campaigns, significantly contributing to impactful marketing initiatives and guiding teams effectively.</p>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <div>
+                      <h3>Team Member</h3>
+                      <p>Popeyes Louisiana Chicken UK</p>
+                      <p>April 2024 - August 2024 (5 months)</p>
+                      <p>Exeter, England, United Kingdom</p>
+                      <p>As a Team Member, I efficiently handled customer orders and maintained operational standards in a fast-paced food service environment.</p>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <div>
+                      <h3>Sales Partner</h3>
+                      <p>John Lewis & Partners</p>
+                      <p>November 2023 - January 2024 (3 months)</p>
+                      <p>Exeter, England, United Kingdom</p>
+                      <p>I drove a 20% increase in holiday sales by executing tailored strategies and streamlined inventory, while also boosting customer satisfaction and average transaction value by 15% through personalized product recommendations.</p>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                  <div>
+                      <h3>Photographer</h3>
+                      <p>Sportifying India</p>
+                      <p>August 2022 - January 2023 (6 months)</p>
+                      <p>Chennai, Tamil Nadu, India</p>
+                      <p>In this role, I captured high-quality sports event photography, contributing to the visual content strategy of Sportifying India.</p>
+                  </div>
+              </article>
+            </div>
+            <button class="slider-nav-btn slider-nav-left" onclick="scrollSlider('other-exp-wrapper', -1)">&#9664;</button>
+            <button class="slider-nav-btn slider-nav-right" onclick="scrollSlider('other-exp-wrapper', 1)">&#9654;</button>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#certifications'"
+      />
+    </section>
+    <section id="certifications">
+      <p class="section__text__p1">Showcasing My</p>
+      <h1 class="title">Certifications & Publications</h1>
+      <div class="experience-details-container">
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Certifications</h2>
+          <div class="cert-pub-slider-container">
+            <div class="article-wrapper cert-pub-article-wrapper" id="cert-wrapper">
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://www.linkedin.com/learning/certificates/4c65b17075c417b759027191d1b4c0e2cf6d6dfca6c5b58c9dad28fe1f14f8fa" target="_blank">IT Security Foundations: Core Concepts</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/AIG/2ZFnEGEDKTQMtEv9C_AIG_Rutzxrr6ffsPHgCiZ_1728608131713_completion_certificate.pdf" target="_blank">AIG - Shields Up: Cybersecurity Job Simulation</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Datacom/yTszJTvkHFBH6zAn3_Datacom_Rutzxrr6ffsPHgCiZ_1728987765420_completion_certificate.pdf" target="_blank">Datacom - Cybersecurity Job Simulation</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/JPMorgan%20Chase/YD2kY95RQxQtXxFTS_JPMorgan%20Chase_Rutzxrr6ffsPHgCiZ_1728833784857_completion_certificate.pdf" target="_blank">JPMorgan Chase - Investment Banking Job Simulation</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/mastercard/vcKAB5yYAgvemepGQ_Mastercard_Rutzxrr6ffsPHgCiZ_1728471957483_completion_certificate.pdf" target="_blank">Mastercard - Cybersecurity Job Simulation</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/PwC%20US/4KqDALSkyRNPXjQGa_PwC%20US_Rutzxrr6ffsPHgCiZ_1729007473906_completion_certificate.pdf" target="_blank">PwC US - Cyber Security Consulting Job Simulation</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://www.credly.com/badges/8c1929ac-b717-42bb-b58f-cf66bdced614/public_url" target="_blank">CISCO Ethical Hacker</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://education.securiti.ai/verification/12D37487D-12D3723C4-127132B25/?swcfpc=1" target="_blank">AI Governance Certification</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://www.credly.com/badges/57a406f1-6344-4707-b31a-9a81bb9c6f9c/public_url" target="_blank">Introduction to Cybersecurity (Cisco)</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://www.credly.com/badges/2137c778-a307-4c50-a258-c24cc14dd698/public_url" target="_blank">Networking Basics (Cisco)</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3><a href="https://education.securiti.ai/verification/12741671D-1274056D4-127132B25/?swcfpc=1" target="_blank">PrivacyOps Certification</a></h3>
+                  </div>
+              </article>
+              <article>
+                  <img src="./assets/checkmark.png" alt="Certification icon" class="icon" />
+                  <div>
+                      <h3>Official ISC2 CC Online Self-Paced Training-1M</h3>
+                  </div>
+              </article>
+            </div>
+            <button class="cert-pub-slider-nav-btn cert-pub-slider-nav-left" onclick="scrollSlider('cert-wrapper', -1)">&#9664;</button>
+            <button class="cert-pub-slider-nav-btn cert-pub-slider-nav-right" onclick="scrollSlider('cert-wrapper', 1)">&#9654;</button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Publications</h2>
+          <div class="cert-pub-slider-container">
+            <div class="article-wrapper cert-pub-article-wrapper" id="pub-wrapper">
+              <article>
+                <img src="./assets/checkmark.png" alt="Publication icon" class="icon" />
+                <div>
+                    <h3><a href="https://ijsart.com/product-availability-checker-63834" target="_blank">PRODUCT AVAILABILITY CHECKER</a></h3>
+                </div>
+              </article>
+            </div>
+            <button class="cert-pub-slider-nav-btn cert-pub-slider-nav-right" onclick="scrollSlider('pub-wrapper', 1)">&#9654;</button>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <!-- New Projects Section -->
+    <section id="projects">
+      <p class="section__text__p1">Discover My</p>
+      <h1 class="title">Innovations</h1>
+      <div class="experience-details-container">
+        <div class="details-container color-container">
+          <h2 class="experience-sub-title project-title">Key Projects</h2>
+          <div class="cert-pub-slider-container">
+            <div class="article-wrapper cert-pub-article-wrapper" id="projects-wrapper">
+              <article>
+                <img src="./assets/PAC.png" alt="Product Availability Checker" class="project-img"/>
+                <div>
+                  <h3><a href="https://github.com/Antonyhyson/PRODUCT-AVAILABILITY-CHECKER.git" target="_blank">PRODUCT AVAILABILITY CHECKER</a></h3>
+                  <p>Developed a hybrid mobile app which improved user engagement by 30% with cross-platform compatibility and received 95% positive feedback, enhancing inventory workflows for retailers.</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/NADS.png" alt="Network Anomaly Detection System" class="project-img"/>
+                <div>
+                  <h3><a href="https://github.com/Antonyhyson/Development-of-a-Network-Anomaly-Detection-System-for-Enhanced-Cybersecurity.git" target="_blank">Network Anomaly Detection System</a></h3>
+                  <p>Developed and evaluated a novel network anomaly detection system using machine learning models (Random Forest, MLP, XGBoost) to effectively detect diverse cyber threats across multiple benchmark datasets, achieving high accuracy and generalization.</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/solana.png" alt="Solana Blockchain Voting Protocol" class="project-img"/>
+                <div>
+                  <h3><a href="https://github.com/Antonyhyson/Basic-Voting-System-Using-Blockchain.git" target="_blank">Solana Blockchain Voting Protocol</a></h3>
+                  <p>Coordinated a mini project on Solana Blockchain Voting, achieving over 1000 transactions per second and designing a secure, decentralized voting protocol with a 3-member team.</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/EXIF.png" alt="EXIF Metadata Analysis Tool" class="project-img"/>
+                <div>
+                  <h3><a href="https://github.com/Antonyhyson/EXIFTOOL.git" target="_blank">EXIF Metadata Analysis Tool</a></h3>
+                  <p>Developed an EXIF metadata analysis tool to efficiently extract and analyze metadata from image files, streamlining forensic investigations and data analysis processes.</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/ROT13.png" alt="Decrypting Caesar Cipher - Rot13" class="project-img"/>
+                <div>
+                  <h3><a href="https://github.com/Antonyhyson/DecryptingCaesarCipher-Rot13.git" target="_blank">Decrypting Caesar Cipher - Rot13</a></h3>
+                  <p>Implemented a Python-based tool for decrypting Caesar Cipher and ROT13 encrypted messages, demonstrating foundational cryptographic understanding.</p>
+                </div>
+              </article>
+              <article>
+                <img src="./assets/Keylogger.png" alt="Keylogger Application" class="project-img"/>
+                <div>
+                  <h3><a href="https://github.com/Antonyhyson/Keylogger.git" target="_blank">Keylogger Application</a></h3>
+                  <p>Created a basic keylogger application for educational purposes, showcasing understanding of system interaction and data capture techniques in cybersecurity.</p>
+                </div>
+              </article>
+            </div>
+            <button class="cert-pub-slider-nav-btn cert-pub-slider-nav-left" onclick="scrollSlider('projects-wrapper', -1)">&#9664;</button>
+            <button class="cert-pub-slider-nav-btn cert-pub-slider-nav-right" onclick="scrollSlider('projects-wrapper', 1)">&#9654;</button>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+
+    <section id="contact">
+      <h1 class="title">Connect with Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:work.antonyhyson@gmail.com">work.antonyhyson@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/antonyhysonseltran" target="_blank">LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+            <img
+              src="./assets/phone.png"
+              alt="Phone icon"
+              class="icon contact-icon"
+            />
+            <p><a href="tel:+447587668038">+44 7587668038</a></p>
+          </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
