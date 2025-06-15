@@ -1,16 +1,15 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Antonyhysonseltran-portfolio/', // <--- ADD OR UPDATE THIS LINE
+  base: '/Antonyhysonseltran-porfolio/', // <-- This is CRITICAL for correct asset paths
   plugins: [react()],
   server: {
-    host: true, // This allows the server to be accessed from network interfaces
-    port: 5173, // Or your preferred port
+    host: true,
+    port: 5173,
   },
   build: {
-    outDir: 'dist', // Ensures build output goes to 'dist'
+    outDir: 'dist',
   },
-});
+})
 ```
