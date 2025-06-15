@@ -1,0 +1,62 @@
+/* ABOUT SECTION */
+
+#about {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 6vh; /* Adjusted padding to ensure content is visible below fixed navbar */
+  }
+  
+  .about-containers {
+    gap: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .about-details-container {
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  /* Note: There's no `.about-pic` class in your provided `About.tsx` HTML.
+     If you had an image in your original `about` section with this class,
+     ensure you've migrated it. If not, this rule might be leftover or unused.
+     I'm including it assuming it existed in your original `style.css`
+     associated with the about section. */
+  .about-pic {
+    border-radius: 2rem;
+  }
+  
+  .details-container {
+    padding: 1.5rem;
+    flex: 1;
+    background: white;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+  }
+  
+  .details-container img.icon {
+    height: 2.2rem; /* Slightly larger icon for detail containers */
+    margin-bottom: 0.5rem;
+  }
+  
+  .text-container {
+    max-width: 800px; /* Constrain text width for readability */
+    margin: 0 auto; /* Center the text container */
+  }
+  
+  /* Assuming this is a general arrow style used for scrolling down sections.
+     If this `arrow` class is unique to the About section's scroll-down arrow,
+     it belongs here. If it's truly generic and used in other sections with
+     identical styling, consider keeping it in a global or utility CSS file
+     if you haven't moved it to Profile.css already.
+     I'm including it here as it's typically used to scroll between sections. */
+  .arrow {
+    position: absolute;
+    right: -5rem; /* Adjust as needed for positioning */
+    bottom: 2.5rem; /* Adjust as needed */
+    transform: rotate(270deg); /* Rotated to point down */
+  }

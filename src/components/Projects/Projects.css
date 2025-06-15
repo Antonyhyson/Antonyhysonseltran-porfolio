@@ -1,0 +1,25 @@
+/* PROJECTS SECTION */
+
+#projects {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto; /* Allow height to adjust to content */
+    padding-bottom: 5rem; /* Add some space at the bottom */
+    min-height: 80vh; /* Ensure it takes up at least 80% of viewport height */
+    padding-top: 6vh; /* Adjusted padding to ensure content is visible below fixed navbar */
+  }
+  
+  /*
+     If your original style.css had any specific styles for a '.project-btn'
+     that were UNIQUE to this Projects section (and not covered by the general
+     .btn, .btn-color-1, .btn-color-2 rules already extracted), you would
+     include them here. Otherwise, the existing button styles will apply.
+  
+     Example (if needed, otherwise omit):
+     .project-btn {
+       border-radius: 0.5rem; // Example, only if unique for project buttons
+       font-size: 0.9em;
+     }
+  */

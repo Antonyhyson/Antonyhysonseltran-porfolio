@@ -1,0 +1,26 @@
+/* CERTIFICATIONS SECTION */
+
+#certifications {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto; /* Allow height to adjust to content */
+    padding-bottom: 5rem; /* Add some space at the bottom */
+    min-height: 80vh; /* Ensure it takes up at least 80% of viewport height */
+    padding-top: 6vh; /* Adjusted padding to ensure content is visible below fixed navbar */
+  }
+  
+  /*
+     If you had specific .project-img or .project-title styles
+     that are UNIQUE to Certifications and NOT already in Slider.css,
+     add them here. Otherwise, the Slider.css rules will apply.
+  
+     Example (if needed, otherwise omit):
+     .project-img {
+       border: 2px solid blue; // Example, only if unique for certifications
+     }
+     .project-title {
+       font-size: 1.8rem; // Example, only if unique for certifications
+     }
+  */

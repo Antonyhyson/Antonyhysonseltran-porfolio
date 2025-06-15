@@ -1,0 +1,43 @@
+/* EXPERIENCE SECTION */
+
+#experience {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto; /* Allow height to adjust to content */
+    padding-bottom: 5rem; /* Add some space at the bottom */
+    min-height: 80vh; /* Ensure it takes up at least 80% of viewport height */
+    padding-top: 6vh; /* Adjusted padding to ensure content is visible below fixed navbar */
+  }
+  
+  .experience-details-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  
+  .experience-details-container .details-container {
+    /* This .details-container is specific to the layout within experience.
+       It might have different flex properties than the one in About. */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content horizontally within the detail box */
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: white;
+    flex: 1; /* Allows it to grow and shrink */
+  }
+  
+  .experience-sub-title {
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }

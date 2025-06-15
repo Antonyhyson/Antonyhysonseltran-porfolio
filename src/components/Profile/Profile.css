@@ -1,0 +1,156 @@
+/* src/components/Profile/Profile.css */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem; /* Adjusted gap for better spacing */
+  height: 90vh; /* Slightly increased height for better visual space */
+  margin-bottom: var(--margin-top-section); /* Use global spacing variable */
+  padding: var(--padding-section); /* Use global padding variable */
+  /* Add for animation */
+  transition: opacity 800ms ease-out, transform 800ms ease-out;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__pic-container img {
+  border-radius: 50%; /* Changed to 50% for a circular image */
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: 0.2rem solid var(--color-accent); /* Add a subtle border matching accent */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+  transition: transform 300ms ease;
+}
+
+.section__pic-container img:hover {
+  transform: scale(1.02); /* Slightly zoom on hover */
+}
+
+.section__text {
+  align-self: center; /* Centers the text section vertically within #profile */
+  text-align: center; /* Centers inline-block children like buttons and text */
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  font-size: 1.1rem;
+  color: var(--color-text-light); /* Using text-light for general info */
+  margin-bottom: 0.5rem;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-dark); /* Using text-dark for main descriptions */
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color-accent); /* Using accent color for title */
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem; /* Ensure consistent spacing */
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+#socials-container .icon {
+  cursor: pointer;
+  height: 2.5rem; /* Slightly larger social icons for better tap targets */
+  width: 2.5rem;
+  transition: transform 300ms ease;
+}
+
+#socials-container .icon:hover {
+  transform: translateY(-3px); /* Lift effect on hover for social icons */
+}
+
+/*
+IMPORTANT: The .btn-container and .btn styles are now largely handled globally in index.css.
+I'm removing most of them from here to avoid conflicts and keep index.css as the single source of truth for global button styles.
+Only add button styles here if they are EXCLUSIVELY for buttons within the Profile section AND need to override global styles.
+For instance, if you want buttons in Profile to be wider than the global 8rem, you'd add:
+.btn-container .btn { width: 10rem; }
+*/
+
+
+/* ======================== Profile Media Queries ======================== */
+/* These adjust the Profile section specifically */
+
+/* For screens smaller than 1400px (e.g., larger desktops, laptops) */
+@media screen and (max-width: 1400px) {
+  #profile {
+      height: auto; /* Adjust height to auto for more flexible layout */
+      flex-direction: column; /* Stack image and text vertically */
+      text-align: center; /* Center content when stacked */
+      padding-top: 8vh; /* Give some top space */
+      gap: 3rem; /* Adjust gap for stacked layout */
+  }
+  .section__pic-container {
+      margin: 0 auto 2rem; /* Center image and add space below */
+  }
+  .section__text {
+      align-self: center; /* Ensure text is centered */
+      padding: 0 1rem; /* Add horizontal padding */
+      width: 100%; /* Allow text to take full width */
+  }
+  .title {
+      font-size: 2.5rem;
+  }
+  .section__text__p2 {
+      font-size: 1.5rem;
+  }
+}
+
+/* For screens smaller than 768px (e.g., most tablets, large phones in landscape) */
+@media screen and (max-width: 768px) {
+  #profile {
+      gap: 2rem; /* Smaller gap for mobile */
+      padding-top: 5vh;
+      margin-bottom: 4rem;
+  }
+  .section__pic-container {
+      height: 250px;
+      width: 250px;
+      margin-bottom: 1.5rem;
+  }
+  .title {
+      font-size: 2rem;
+  }
+  .section__text__p1 {
+      font-size: 0.9rem;
+  }
+  .section__text__p2 {
+      font-size: 1.1rem;
+  }
+}
+
+/* For screens smaller than 480px (e.g., standard mobile phones) */
+@media screen and (max-width: 480px) {
+  .section__pic-container {
+      height: 200px;
+      width: 200px;
+  }
+  .title {
+      font-size: 1.8rem;
+  }
+  .section__text__p1,
+  .section__text__p2 {
+      font-size: 0.85rem;
+  }
+}

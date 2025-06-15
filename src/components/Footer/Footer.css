@@ -1,0 +1,16 @@
+/* FOOTER SECTION */
+
+footer {
+    height: 26vh; /* Adjust height as needed */
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Ensures text is centered within the footer */
+    padding: 1rem 0; /* Add some vertical padding */
+  }
+  
+  footer p {
+    color: rgb(85, 85, 85);
+    font-size: 1.2rem;
+  }

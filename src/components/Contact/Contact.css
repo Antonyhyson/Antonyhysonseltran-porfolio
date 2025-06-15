@@ -1,0 +1,57 @@
+/* CONTACT SECTION */
+
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh; /* Adjust height as needed */
+    min-height: fit-content;
+    padding-top: 6vh; /* Adjusted padding to ensure content is visible below fixed navbar */
+  }
+  
+  .contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 1.5rem 2.5rem; /* Increased padding */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 2rem; /* Gap between contact info containers */
+  }
+  
+  .contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Gap between icon and text */
+    margin: 1rem;
+  }
+  
+  .contact-info-container p {
+    font-size: larger;
+    color: rgb(0, 0, 0); /* Ensure text is visible */
+  }
+  
+  .contact-info-container a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .contact-info-container a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: rgb(181, 181, 181);
+  }
+  
+  .contact-icon {
+    cursor: default; /* Icons here might not be clickable, so default cursor */
+    height: 2.5rem; /* Larger icons for contact */
+  }
+  
+  .email-icon {
+    height: 2.5rem; /* Consistent size for email icon */
+  }

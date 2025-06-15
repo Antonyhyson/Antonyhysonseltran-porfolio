@@ -1,13 +1,469 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+
+/* ======================== VARIABLES ======================== */
+:root {
+  /* Colors */
+  --color-primary-bg: #F0F2F5; /* Light background for main sections */
+  --color-secondary-bg: #FFFFFF; /* White background for cards/details */
+  --color-text-dark: #333333; /* Darker text for headings */
+  --color-text-light: #555555; /* Lighter text for paragraphs */
+  --color-accent: #5DADE2; /* A professional blue for accents/links */
+  --color-border: #E0E0E0; /* Light grey for borders */
+  --color-hover-dark: #222222; /* Darker hover for buttons */
+  --color-hover-light: #F8F8F8; /* Lighter hover for backgrounds */
+  --color-white: #FFFFFF; /* Explicit white for certain elements like articles */
+
+  /* Spacing */
+  --padding-section: 6vw; /* Responsive padding for sections */
+  --margin-top-section: 10vh; /* Consistent top margin for sections */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ======================== BASE STYLES ======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: var(--color-primary-bg); /* Use primary background color */
+  color: var(--color-text-dark); /* Use dark text color */
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  position: relative;
+  z-index: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: var(--color-text-light); /* Use light text color for paragraphs */
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3 {
+  font-family: "Electrolize", sans-serif;
+  color: var(--color-text-dark); /* Use dark text color for headings */
+  margin-bottom: 1rem;
+}
+
+/* General Link Styling */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+/* ======================== BUTTONS ======================== */
+.btn-container {
+  display: flex; /* Default for desktop: side-by-side */
+  gap: 1rem;
+  justify-content: center; /* Centers buttons horizontally */
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 0.1rem solid var(--color-text-dark); /* Border color from variables */
+  background: none;
+  color: var(--color-text-dark);
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: var(--color-border) 0.1rem solid; /* Use border color from variables */
+}
+
+.btn-color-1 {
+  background: var(--color-text-dark);
+  color: var(--color-primary-bg);
+}
+
+.btn-color-1:hover {
+  background: var(--color-hover-dark);
+  color: var(--color-primary-bg);
+}
+
+.btn-color-2 {
+  background: var(--color-primary-bg);
+  color: var(--color-text-dark);
+}
+
+.btn-color-2:hover {
+  background: var(--color-hover-light);
+  border-color: var(--color-text-dark);
+}
+
+/* ======================== ANIMATIONS ======================== */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 800ms ease-out, transform 800ms ease-out;
+}
+
+.fade-in.is-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: More specific animations if you decide to use them on individual elements */
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ======================== GLOBAL CARD & DETAIL CONTAINER STYLES ======================== */
+.details-container {
+  padding: 1.5rem; /* Slightly more padding */
+  flex: 1; /* Allow flex items to grow */
+  background: var(--color-secondary-bg); /* Use secondary background for cards */
+  border-radius: 1.5rem; /* More rounded corners */
+  border: 0.1rem solid var(--color-border); /* Subtle border */
+  text-align: center;
+  transition: all 300ms ease-in-out; /* Smooth transitions for hover effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+  display: flex; /* Ensure content aligns nicely inside */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Distribute space */
+}
+
+.details-container:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover */
+}
+
+.details-container.color-container { /* Specific color for these containers if needed */
+    background: var(--color-secondary-bg);
+    border-color: var(--color-border);
+}
+
+/* General Article Styles (used in sliders for skills, certs, projects) */
+.article-wrapper article {
+  display: flex;
+  flex-direction: column; /* Changed to column to stack image/text properly for projects */
+  width: 18rem; /* Fixed width for articles in sliders */
+  gap: 0.5rem; /* Smaller gap between icon and text */
+  padding: 1.25rem 1rem; /* Adjust padding for a slightly smaller card */
+  border-radius: 1.25rem; /* Rounded corners for articles */
+  border: 0.1rem solid var(--color-border); /* Subtle border */
+  background: var(--color-white); /* White background for individual articles within sliders */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03); /* Lighter shadow for nested cards */
+  transition: all 300ms ease-in-out; /* Smooth transition for hover */
+  cursor: pointer; /* Indicate interactivity */
+  align-items: center; /* Center content horizontally within article */
+  text-align: center;
+}
+
+.article-wrapper article:hover {
+  transform: translateY(-3px); /* Subtle lift for individual articles */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Slightly more shadow on hover */
+}
+
+.article-wrapper article .icon {
+    cursor: default; /* Icons within articles shouldn't typically have a pointer */
+}
+
+/* Adjustments for text within articles */
+.article-wrapper article h3 {
+  font-size: 1.1rem; /* Slightly smaller font for article titles */
+  margin-bottom: 0.2rem; /* Less margin below heading */
+  color: var(--color-text-dark);
+}
+
+.article-wrapper article p {
+  font-size: 0.9rem; /* Smaller font for article text */
+  color: var(--color-text-light);
+  line-height: 1.4;
+  margin-bottom: 0.5rem; /* Less bottom margin */
+}
+
+.article-wrapper article a {
+  text-decoration: none; /* Remove underline from links in articles */
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.article-wrapper article a:hover {
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* Icons within cards */
+.icon {
+  height: 2rem; /* Consistent icon size */
+  width: 2rem;
+  margin-right: 0.5rem; /* Space from text */
+}
+
+/* Specific for Project Images within articles */
+.project-img {
+    border-radius: 1rem;
+    width: 90%; /* Make project images fill the width of their container */
+    height: 10rem; /* Fixed height for consistency */
+    object-fit: cover; /* Crop image to fit */
+    margin-bottom: 1rem; /* Space below image */
+    transition: transform 300ms ease; /* Add transition for hover */
+}
+.project-img:hover {
+    transform: scale(1.03); /* Slightly scale up on hover */
+}
+
+
+/* Adjustments for project title/description layout */
+.project-title {
+    margin-bottom: 0.5rem; /* Adjust margin for project titles */
+}
+
+
+/* ======================== SLIDER NAVIGATION BUTTONS ======================== */
+.slider-container {
+    position: relative; /* Needed for absolute positioning of buttons */
+    padding: 0 2rem; /* Space for buttons */
+}
+.slider-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-text-dark);
+    color: var(--color-primary-bg);
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.7;
+    transition: opacity 300ms ease, background 300ms ease;
+}
+
+.slider-nav-btn:hover {
+    opacity: 1;
+    background: var(--color-accent);
+}
+
+.slider-nav-left {
+    left: 0;
+}
+
+.slider-nav-right {
+    right: 0;
+}
+
+/* Ensure article-wrapper remains scrollable */
+.article-wrapper {
+    display: flex;
+    gap: 2rem; /* Space between articles */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Optional: snap to articles */
+    padding-bottom: 1rem; /* Prevents scrollbar from obscuring content if it appears */
+    scroll-padding: 0 1rem; /* Padding for scroll snap */
+}
+
+.article-wrapper article {
+    flex-shrink: 0; /* Prevent articles from shrinking */
+    scroll-snap-align: start; /* Snap to the start of each article */
+}
+
+
+/* ======================== MEDIA QUERIES ======================== */
+
+/* For screens smaller than 1400px (e.g., larger desktops, laptops) */
+@media screen and (max-width: 1400px) {
+  #profile {
+    height: 83vh; /* Adjust height for smaller screens */
+    margin-bottom: 6rem;
+  }
+  .about-details-container {
+    flex-wrap: wrap; /* Allow details containers to wrap */
+  }
+  .contact-info-container {
+    flex-direction: column; /* Stack contact info vertically */
+  }
+}
+
+/* For screens smaller than 1200px (e.g., tablets in landscape, smaller laptops) */
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none; /* Hide desktop nav */
+  }
+  #hamburger-nav {
+    display: flex; /* Show hamburger nav */
+  }
+  #experience,
+  #projects,
+  #contact,
+  #about,
+  #certifications {
+    margin-top: 0; /* Remove top margin for sections on smaller screens */
+  }
+  #profile {
+    display: block; /* Stack profile content vertically */
+    padding-top: 10vh;
+  }
+  .section__pic-container {
+    width: 275px;
+    height: 275px;
+    margin: 0 auto 2rem; /* Center image */
+  }
+  .about-containers {
+    margin-top: 0;
+  }
+  .details-container {
+    width: 80%; /* Adjust width for details containers */
+    margin: 0 auto; /* Center them */
+  }
+  .experience-details-container {
+    gap: 1rem; /* Smaller gap between details containers */
+    margin-top: 1rem;
+    flex-direction: column; /* Stack vertically for experience/certs */
+  }
+  .text-container {
+    width: 80%; /* Adjust text container width */
+    margin: 0 auto; /* Center text */
+  }
+  .btn-container {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.5rem;
+  }
+}
+
+/* For screens smaller than 768px (e.g., most tablets, large phones in landscape) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 1rem; /* Base font size adjustment */
+  }
+  .title {
+    font-size: 2.5rem; /* Smaller titles */
+    margin-bottom: 2rem;
+  }
+  .section__text__p1 {
+    font-size: 1rem;
+  }
+  .section__text__p2 {
+    font-size: 1.1rem;
+  }
+  #profile {
+    height: auto; /* Allow content to dictate height */
+    margin-bottom: 2rem;
+  }
+  .section__text {
+    align-items: center; /* Center text content */
+    text-align: center;
+    padding: 0 1rem;
+  }
+  .section__text__p2 {
+    font-size: 1.25rem;
+  }
+  .about-containers {
+    flex-direction: column; /* Stack about details vertically */
+  }
+  .details-container {
+    width: 90%; /* Larger width for details containers on smaller screens */
+    margin-bottom: 1rem; /* Add margin between stacked items */
+    padding: 1rem; /* Reduce padding */
+  }
+  .article-wrapper {
+    flex-wrap: nowrap; /* Keep articles in a row, allow scrolling */
+    justify-content: flex-start;
+    padding-left: 1rem; /* Adjust padding for slider */
+    padding-right: 1rem;
+  }
+  .article-wrapper article {
+    width: 16rem; /* Adjust article width for better fit */
+  }
+  .slider-nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.2rem;
+  }
+  .slider-nav-left {
+    left: -0.5rem; /* Adjust button position */
+  }
+  .slider-nav-right {
+    right: -0.5rem;
+  }
+  .contact-info-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  .contact-info p {
+    font-size: 1rem;
+  }
+  .icon.arrow {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+
+/* For screens smaller than 480px (e.g., standard mobile phones) */
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 2rem; /* Even smaller titles for very small screens */
+  }
+  .section__text__p1,
+  .section__text__p2 {
+    font-size: 0.9rem; /* Smaller text for compact screens */
+  }
+  .btn {
+    width: 7rem;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  .article-wrapper article {
+    width: 14rem; /* Further reduce article width */
+  }
+  .project-img {
+      height: 8rem; /* Smaller project images */
+  }
+}
+
+/* General Link Adjustments */
+#desktop-nav .nav-links {
+  gap: 1.5rem; /* Adjust spacing for desktop links */
 }

@@ -1,0 +1,133 @@
+/* SLIDER CONTAINER & ARTICLES */
+
+.slider-container {
+    position: relative; /* Needed for positioning arrows */
+    width: 100%;
+    overflow: hidden; /* Hide overflow outside the wrapper */
+  }
+  
+  .article-wrapper {
+    display: flex;
+    gap: 1.5rem; /* The gap used for scroll calculation */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding-bottom: 1rem; /* Space for scrollbar if present */
+    scroll-snap-type: x mandatory; /* Optional: for snapping to cards */
+    -webkit-overflow-scrolling: touch; /* Smoother scrolling on iOS */
+  
+    /* Hide scrollbar for most browsers */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+  .article-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Base style for individual article cards within sliders */
+  article {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    text-align: center;
+    flex: 0 0 auto; /* Prevent articles from shrinking and allow them to take their natural width */
+    width: 300px; /* Example fixed width, adjust as needed or make responsive */
+    scroll-snap-align: start; /* Optional: for snapping to cards */
+    transition: all 300ms ease; /* Smooth transition for hover effects */
+  }
+  
+  article:hover {
+    border-color: rgb(0, 0, 0); /* Example hover effect */
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  /* Icons within articles (e.g., checkmark, project images) */
+  article .icon {
+    height: 2.2rem; /* Consistent icon size */
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Project images within articles (if they have a different size) */
+  .project-img { /* This class is used for images in Certifications and Projects articles */
+    border-radius: 2rem;
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  article h3 {
+    color: #5DADE2; /* Title color */
+    margin-bottom: 0.5rem;
+  }
+  
+  article p {
+    color: #000000; /* Text color */
+  }
+  
+  /* Styles for lists within articles (like project details) */
+  article ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    text-align: left; /* Align list items to the left */
+    margin-top: 1rem;
+  }
+  
+  article ul li {
+    position: relative; /* For custom bullet */
+    padding-left: 1.5em; /* Space for custom bullet */
+    margin-bottom: 0.5em;
+    color: #333;
+  }
+  
+  article ul li::before {
+    content: "•"; /* Custom bullet point */
+    color: #5DADE2; /* Color of the bullet */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+  }
+  
+  
+  /* SLIDER NAVIGATION BUTTONS */
+  
+  .slider-nav-btn {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above slider content */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    color: #333;
+  }
+  
+  .slider-nav-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: #999;
+    color: #000;
+  }
+  
+  .slider-nav-left {
+    left: 10px; /* Position left button */
+  }
+  
+  .slider-nav-right {
+    right: 10px; /* Position right button */
+  }
+  
+  /* If you had specific .cert-pub-slider-nav-btn and they were styled identically,
+     you don't need them separately. If they had unique styles, include them here
+     or ensure they are captured. Based on your description, they might be consolidated. */
