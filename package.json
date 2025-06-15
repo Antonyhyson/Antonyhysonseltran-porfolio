@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://antonyhyson.github.io/antonyhysonseltran-portfolio/",  // <--- ENSURE DOUBLE QUOTES HERE
+  "homepage": "https://antonyhyson.github.io/Antonyhysonseltran-portfolio/",  // <--- ENSURE DOUBLE QUOTES HERE
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
